@@ -1,0 +1,49 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# dependencies
+# Ignoring all unnecessary  frontend files
+ui/.DS_Store
+ui/.tern-project
+ui/build/*
+ui/node_modules/*
+ui/dist/
+ui/npm-debug.log*
+ui/yarn-debug.log*
+ui/yarn-error.log*
+ui/test/unit/coverage/
+ui/test/e2e/reports/
+ui/selenium-debug.log
+ui/package-lock.json
+ui/tests/unit/coverage/

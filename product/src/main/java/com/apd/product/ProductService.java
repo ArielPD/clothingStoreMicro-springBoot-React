@@ -18,7 +18,9 @@ public class ProductService {
     public List<String> getBrands() {
         List<String> listBrands = new ArrayList<>();
         productRepoitory.findAll().stream().forEach(product -> {
-            listBrands.add(product.getBrand());
+            if (!listBrands.contains(product.getBrand())) {
+                listBrands.add(product.getBrand());
+            }
         });
         return listBrands;
     }
@@ -26,7 +28,9 @@ public class ProductService {
     public List<String> getTypes() {
         List<String> listTypes = new ArrayList<>();
         productRepoitory.findAll().stream().forEach(product -> {
-            listTypes.add(product.getType());
+            if (!listTypes.contains(product.getType())) {
+                listTypes.add(product.getType());
+            }
         });
         return listTypes;
     }

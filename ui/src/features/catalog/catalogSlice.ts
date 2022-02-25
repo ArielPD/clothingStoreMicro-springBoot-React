@@ -34,8 +34,9 @@ export const fetchProductsAsync = createAsyncThunk<Product[], void, {state: Root
         const params = getAxiosParams(thunkAPI.getState().catalog.productParams);
         try {
             const response = await agent.Catalog.list(params);
-            thunkAPI.dispatch(setMetaData(response.metaData));
-            return response.items;
+            //thunkAPI.dispatch(setMetaData(response.metaData));
+            //return response.items;
+            return response;
         } catch (error: any) {
             return thunkAPI.rejectWithValue({error: error.data})
         }

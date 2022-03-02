@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
@@ -24,8 +26,11 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> getProducts() {
-        return ResponseEntity.ok(productService.getProducts());
+    public ResponseEntity<List<Product>> getProducts(
+            @RequestParam("searchTerm") Optional<String>  searchTerm,
+            @RequestParam("orderBy") Optional<String> orderBy
+    ) {
+        return ResponseEntity.ok(productService.getProducts(searchTerm, orderBy));
     }
 
     @GetMapping("/filters")

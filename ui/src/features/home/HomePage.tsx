@@ -30,8 +30,8 @@ const HomePage = () => {
                 </Typography>
             </Box>
 
-            
-            <table>
+
+            {/*<table>
                 <tbody>
                 <tr>
                     <td style={{color: '#ff00ff',  backgroundColor: '#FFFFFF'}}>Q</td>
@@ -44,7 +44,7 @@ const HomePage = () => {
                     <td style={{color: '#000000', backgroundColor: '#FF7777'}}>O</td>
                 </tr>
                 </tbody>
-            </table>
+            </table>*/}
 
         </>
     )
